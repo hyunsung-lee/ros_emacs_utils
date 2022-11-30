@@ -381,6 +381,9 @@
 ;; Completion
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(define-obsolete-function-alias
+  'dynamic-completion-table 'completion-table-dynamic "23.1")
+
 (defun current-ros-word (&optional package)
   "wraps (current-word) from simple.el to pick what is most likely a package, topic, message or action name"
   (let* ((word (current-word nil nil)) ;; neither strict nor just the symbol
